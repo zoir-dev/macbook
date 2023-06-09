@@ -9,13 +9,13 @@ import gg from "../../assets/гг.png";
 import arrow from "../../assets/arrow.png";
 
 const Header = ({ scrollToComponent }) => {
+  const { t, i18n } = useTranslation();
   const [lang, setLang] = useState(
     localStorage.getItem("language") || i18n.language
   );
   const [anchorEl, setAnchorEl] = useState(null);
   const [menu, setMenu] = useState(false);
   const [drawer, setDrawer] = useState(false);
-  const { t, i18n } = useTranslation();
   const changeLang = (newLang) => {
     setLang(newLang.name);
     handleClose();
@@ -63,7 +63,6 @@ const Header = ({ scrollToComponent }) => {
             </MenuItem>
           ))}
         </Menu>
-
         <Menuu className="header_menu_icon" onClick={() => setDrawer(true)} />
       </div>
       <HeaderDrawer
