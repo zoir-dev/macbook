@@ -9,7 +9,9 @@ import gg from "../../assets/гг.png";
 import arrow from "../../assets/arrow.png";
 
 const Header = ({ scrollToComponent }) => {
-  const [lang, setLang] = useState(localStorage.getItem("language") || "uzb");
+  const [lang, setLang] = useState(
+    localStorage.getItem("language") || i18n.language || "uzb"
+  );
   const [anchorEl, setAnchorEl] = useState(null);
   const [menu, setMenu] = useState(false);
   const [drawer, setDrawer] = useState(false);
@@ -49,7 +51,7 @@ const Header = ({ scrollToComponent }) => {
         <div onClick={handleOpen}>
           <img
             className="flag"
-            src={data.filter((d) => d.name === lang)[0].img}
+            src={data.filter((d) => d.name === i18n.language)[0].img}
             alt="flag"
           />
           <img className={`arrow ${menu && "open_menu "}`} src={arrow} alt="" />
