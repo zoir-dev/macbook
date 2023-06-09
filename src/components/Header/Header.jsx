@@ -9,7 +9,7 @@ import gg from "../../assets/гг.png";
 import arrow from "../../assets/arrow.png";
 
 const Header = ({ scrollToComponent }) => {
-  const [lang, setLang] = useState(localStorage.getItem("language") || "uz");
+  const [lang, setLang] = useState(localStorage.getItem("language") || "uzb");
   const [anchorEl, setAnchorEl] = useState(null);
   const [menu, setMenu] = useState(false);
   const [drawer, setDrawer] = useState(false);
@@ -19,9 +19,8 @@ const Header = ({ scrollToComponent }) => {
     handleClose();
   };
   useEffect(() => {
+    i18n.changeLanguage(lang);
     localStorage.setItem("language", lang);
-    setLang(lang);
-    i18n.changeLanguage(localStorage.getItem("language") || lang);
   }, [lang, i18n]);
   const handleOpen = (event) => {
     setAnchorEl(event.currentTarget);

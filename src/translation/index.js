@@ -92,8 +92,8 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: "uz",
-    fallbackLng: "uz", // Fallback language
+    lng: "uzb",
+    fallbackLng: "uzb", // Fallback language
     interpolation: {
       escapeValue: false,
     },
