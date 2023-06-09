@@ -10,7 +10,7 @@ import arrow from "../../assets/arrow.png";
 
 const Header = ({ scrollToComponent }) => {
   const [lang, setLang] = useState(
-    localStorage.getItem("language") || i18n.language || "uzb"
+    localStorage.getItem("language") || i18n.language
   );
   const [anchorEl, setAnchorEl] = useState(null);
   const [menu, setMenu] = useState(false);
