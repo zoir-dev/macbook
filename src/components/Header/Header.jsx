@@ -1,5 +1,5 @@
 import { Menu, MenuItem } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { data } from ".";
 import "./style.scss";
 import { useTranslation } from "react-i18next";
@@ -9,11 +9,19 @@ import gg from "../../assets/гг.png";
 import arrow from "../../assets/arrow.png";
 
 const Header = () => {
-  const [lang, setLang] = useState("ru");
+  const [lang, setLang] = useState(localStorage.getItem("language") || "ru");
   const [anchorEl, setAnchorEl] = useState(null);
   const [menu, setMenu] = useState(false);
   const [drawer, setDrawer] = useState(false);
   const { t, i18n } = useTranslation();
+  const changeLang = (newLang) => {
+    setLang(newLang.name);
+    handleClose();
+  };
+  useEffect(() => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang);
+  }, [lang, i18n]);
   const handleOpen = (event) => {
     setAnchorEl(event.currentTarget);
     setMenu(true);
@@ -22,17 +30,11 @@ const Header = () => {
     setMenu(false);
     // setAnchorEl(null);
   };
-  const changeLang = (d) => {
-    handleClose();
-    setLang(d.name);
-    i18n.changeLanguage(d.name);
-  };
 
   function scrollToComponent(id) {
     const targetComponent = document.getElementById(id);
     targetComponent.scrollIntoView({ behavior: "smooth" });
   }
-  console.log(Boolean(anchorEl));
   return (
     <div className="header_div">
       <img src={gg} className="logo" alt="" />

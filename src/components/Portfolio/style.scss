@@ -4,15 +4,17 @@
     .logos{
         display: grid;
         grid-template-columns: repeat(3,minmax(0,1fr));
+        justify-content: space-between;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         width: max-content;
         gap: 100px; 
-        padding-top: 100px;   
-        h2{
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 61px;
+        padding-top: 70px;   
+        img{
+            width: 274px;
+            object-fit: contain;
+            cursor: pointer;
         }
     }
     .absolute7{
@@ -26,6 +28,16 @@
     .portfolio_div{
         img{
             width: 15%;
+        }
+    }  
+}
+@media screen and (max-width:1300px){
+    .portfolio_div{
+        .logos{
+            width: 100%;
+            img{
+                width: 100%;
+            }
         }
     }  
 }
@@ -55,6 +67,19 @@
         }
         .absolute7{
             bottom: -80%;
+        }
+    }  
+}
+@media screen and (max-width:500px){
+    .portfolio_div{
+        .logos{
+            margin: 0 auto;
+            gap: 30px;
+            padding-top: 40px;
+            // grid-template-columns: repeat(2,minmax(0,1fr));
+            h2{
+                font-size: 35px;
+            }
         }
     }  
 }
