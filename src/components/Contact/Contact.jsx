@@ -4,7 +4,7 @@ import "./style.scss";
 const Contact = () => {
   const { t } = useTranslation();
   return (
-    <div className="contact_div container">
+    <div className="contact_div container" id="contact">
       <h1>{t("contacth1")}</h1>
       <h2>{t("contacth2")}</h2>
       <div className="inputs">

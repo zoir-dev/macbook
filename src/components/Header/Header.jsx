@@ -8,8 +8,8 @@ import HeaderDrawer from "./HeaderDrawer";
 import gg from "../../assets/гг.png";
 import arrow from "../../assets/arrow.png";
 
-const Header = () => {
-  const [lang, setLang] = useState(localStorage.getItem("language") || "ru");
+const Header = ({ scrollToComponent }) => {
+  const [lang, setLang] = useState(localStorage.getItem("language") || "uz");
   const [anchorEl, setAnchorEl] = useState(null);
   const [menu, setMenu] = useState(false);
   const [drawer, setDrawer] = useState(false);
@@ -28,13 +28,9 @@ const Header = () => {
   };
   const handleClose = () => {
     setMenu(false);
-    // setAnchorEl(null);
+    setAnchorEl(null);
   };
 
-  function scrollToComponent(id) {
-    const targetComponent = document.getElementById(id);
-    targetComponent.scrollIntoView({ behavior: "smooth" });
-  }
   return (
     <div className="header_div">
       <img src={gg} className="logo" alt="" />
@@ -53,7 +49,7 @@ const Header = () => {
         <div onClick={handleOpen}>
           <img
             className="flag"
-            src={data?.filter((d) => d.name === lang)[0].img}
+            src={data.filter((d) => d.name === lang)[0].img}
             alt="flag"
           />
           <img className={`arrow ${menu && "open_menu "}`} src={arrow} alt="" />

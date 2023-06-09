@@ -3,7 +3,7 @@ import "./style.scss";
 import one from "../../assets/1.png";
 import two from "../../assets/2.png";
 import three from "../../assets/3.png";
-const Get = () => {
+const Get = ({ scrollToComponent }) => {
   const { t } = useTranslation();
   return (
     <div id="get" className="get_div container">
@@ -32,7 +32,12 @@ const Get = () => {
           <p>{t("5")}</p>
         </div>
       </div>
-      <button className="main_button">{t("home_button")}</button>
+      <button
+        className="main_button"
+        onClick={() => scrollToComponent("contact")}
+      >
+        {t("home_button")}
+      </button>
       <img className="absolute3" src={three} alt="" />
     </div>
   );
