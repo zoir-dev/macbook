@@ -35,12 +35,18 @@
     line-height: 25px;
     padding: 25px 50px;
     cursor: pointer;
-    transition: 0.3s ease all;
-    position: relative;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     -webkit-animation: pulsee  1s infinite;
+    animation: pulsee  1s infinite;
+    border-radius: 999px;
+    box-shadow: 0 0 0 1em transparent;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 900;
     &:hover{
-        box-shadow: #28BF04 4px 8px 16px;
+        box-shadow: #28BF04 0px 4px 16px;
+        animation: largerr 1s infinite;
     }
+    
 }
 @media screen and (max-width:1650px){
     .home_div{

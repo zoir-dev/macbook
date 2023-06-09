@@ -48,6 +48,19 @@ h1{
       transform: scale(1);
   }
 }
+@keyframes largerr {
+   0% {
+     transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
+  }
+}
+@keyframes pulsee {
+  0% {
+    box-shadow: 0 0 0 0 #28BF04;
+  }
+}
 @media screen and (max-width:1000px){
   .main_div{
     gap: 100px;
