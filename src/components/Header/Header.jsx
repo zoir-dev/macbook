@@ -51,7 +51,7 @@ const Header = ({ scrollToComponent }) => {
         <div onClick={handleOpen}>
           <img
             className="flag"
-            src={data.filter((d) => d.name === i18n.language)[0].img}
+            src={data.filter((d) => d.name === lang)[0].img}
             alt="flag"
           />
           <img className={`arrow ${menu && "open_menu "}`} src={arrow} alt="" />
