@@ -19,8 +19,9 @@ const Header = ({ scrollToComponent }) => {
     handleClose();
   };
   useEffect(() => {
-    i18n.changeLanguage(lang);
     localStorage.setItem("language", lang);
+    setLang(lang);
+    i18n.changeLanguage(localStorage.getItem("language") || lang);
   }, [lang, i18n]);
   const handleOpen = (event) => {
     setAnchorEl(event.currentTarget);

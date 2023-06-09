@@ -39,7 +39,7 @@ const resources = {
       "Stages of work": "Ish bosqichlari",
       Portfolio: "Portfel",
       home_title:
-        "Diqqatni jalb qiling, ajralib turing, muvaffaqiyatga erishing - biz bilan, sizning ishonchli marketing hamkoringiz!",
+        "Diqqatni jalb qiling, ajralib turing, biz bilan muvaffaqiyatga erishing, sizning ishonchli marketing hamkoringiz!",
       home_button: "MUROJAAT UCHUN",
       1: "Bizda katta tajriba va tasdiqlangan holatlar mavjud",
       2: "Nostandart yondashuv va ijodiy fikrlash",
@@ -93,7 +93,7 @@ i18n
   .init({
     resources,
     lng: "uz",
-    fallbackLng: "en", // Fallback language
+    fallbackLng: "uz", // Fallback language
     interpolation: {
       escapeValue: false,
     },
