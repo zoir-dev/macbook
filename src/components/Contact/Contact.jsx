@@ -7,21 +7,45 @@ import ReactInputMask from "react-input-mask";
 // import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const [email, setEmail] = useState("");
-  const [tel, setTel] = useState("+998");
+  const [name, setName] = useState("");
+  const [tel, setTel] = useState("(+998) (__) ___-__-__");
   const [alert, setAlert] = useState(false);
   const [loading, setLoading] = useState(false);
-  // const [isValid, setIsValid] = useState(false);
+  const [validName, setValidName] = useState(false);
+  const [validTel, setValidTel] = useState(false);
   const { t } = useTranslation();
 
-  const handleSend = () => {
-    setLoading(true);
-    setAlert(true);
+  const extractPhoneNumber = (string) => {
+    const pattern = /\d/g; // Regular expression pattern to match any digit
+    const numbers = string.match(pattern);
+    return numbers ? numbers.join("") : "";
   };
   const handleKeyDown = (e) => {
-    // Prevent the user from deleting the country code "(+998) ("
-    if (e.key === "Backspace" && tel === "+998") {
+    if (e.key === "Backspace" && tel === "(+998) (__) ___-__-__") {
       e.preventDefault();
+    }
+  };
+  const sendEmail = async () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const data = { message: "Data fetched from the backend" };
+        resolve(data);
+      }, 2000); // Simulating a 2-second delay
+    });
+  };
+  const handleSend = async () => {
+    if (name && extractPhoneNumber(tel).length === 12) {
+      setLoading(true);
+      await sendEmail();
+      setAlert(true);
+      setLoading(false);
+      setValidName(false);
+      setValidTel(false);
+      setName("");
+      setTel("(+998) (__) ___-__-__");
+    } else {
+      setValidName(true);
+      setValidTel(true);
     }
   };
   return (
@@ -31,26 +55,29 @@ const Contact = () => {
       <div className="inputs">
         <div className="input">
           <label htmlFor="input1">{t("label1")}</label>
-          <input type="text" id="input1" />
+          <input
+            type="text"
+            id="input1"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          {!name && validName && <p className="validation">{t("nameValid")}</p>}
         </div>
         <div className="input">
-          <label
-            htmlFor="input2"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          >
-            {t("label2")}
-          </label>
+          <label htmlFor="input2">{t("label2")}</label>
           <ReactInputMask
             id="input2"
             mask="(+999) (99) 999-99-99"
             value={tel}
             onChange={(e) => setTel(e.target.value)}
             onKeyDown={(e) => handleKeyDown(e)}
-            maskPlaceholder="_"
+            maskplaceholder="_"
             alwaysShowMask
             type="tel"
           />
+          {extractPhoneNumber(tel).length !== 12 && validTel && (
+            <p className="validation">{t("phoneValid")}</p>
+          )}
         </div>
       </div>
       <button

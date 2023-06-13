@@ -7,7 +7,7 @@
     }
     .inputs{
         display: flex;
-        align-items: center;
+        // align-items: center;
         justify-content: center;
         gap: 30px;
         margin: 85px auto;
@@ -38,17 +38,28 @@
                 }
             }
         }
+        .validation{
+            color: red;
+            margin-left: 10px;
+            font-size: 16px;
+        }
     }
 }
 
 @media screen and (max-width:800px) {
     .contact_div{
         .inputs{
-             padding: 60px auto;
+            padding: 60px auto;
             flex-direction: column;
             margin: 50px auto;
             input{
                 margin-left: 10%;
+            }
+            .validation{
+                margin-left: 10%;
+                padding-left: 10px;
+                padding-top: 5px;
+                font-size: 14px;
             }
         }
     }

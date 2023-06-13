@@ -33,6 +33,8 @@ const resources = {
       application:
         "Your application has been accepted, we will contact you soon!",
       submitting: "Submitting...",
+      nameValid: "Name is required",
+      phoneValid: "Phone Number is required",
     },
   },
   uzb: {
@@ -63,6 +65,8 @@ const resources = {
       application:
         "Arizangiz qabul qilindi, tez orada siz bilan aloqaga chiqamiz!",
       submitting: "Jo'natilmoqda...",
+      nameValid: "Ism Majburiy",
+      phoneValid: "Telefon raqam majburiy",
     },
   },
   ru: {
@@ -92,6 +96,8 @@ const resources = {
       contact: "Контакты",
       application: "Ваша заявка принята, мы свяжемся с вами в ближайшее время!",
       submitting: "Отправка...",
+      nameValid: "Oбязательно имя",
+      phoneValid: "Oбязательно номер",
     },
   },
 };
