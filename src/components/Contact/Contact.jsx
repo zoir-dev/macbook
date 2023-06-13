@@ -49,6 +49,7 @@ const Contact = () => {
             onKeyDown={(e) => handleKeyDown(e)}
             maskPlaceholder="_"
             alwaysShowMask
+            type="tel"
           />
         </div>
       </div>
