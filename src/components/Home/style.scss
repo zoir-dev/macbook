@@ -42,11 +42,24 @@
     box-sizing: border-box;
     display: block;
     font-weight: 900;
+    text-transform: uppercase;
     &:hover{
         box-shadow: #28BF04 0px 4px 16px;
         animation: largerr 1s infinite;
     }
-    
+    .MuiCircularProgress-root{
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+.loading_button{
+    pointer-events: none;
+    opacity: 0.5;
+    animation: none;
+    // box-shadow: #28BF04 0px 4px 16px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 @media screen and (max-width:1650px){
     .home_div{
@@ -109,6 +122,13 @@
         font-size: 14px;
         line-height: 17px;
         padding: 19px 32px;
+         .MuiCircularProgress-root{
+           width: 20px !important;
+           height: 20px !important;
+        }
+    }
+    .loading_button{
+        gap: 10px;
     }
     img{
         width: 100%;

@@ -46,9 +46,7 @@
         .logos{
             gap: 40px;
             padding-top: 60px;
-            h2{
-                font-size: 45px;
-            }
+            
         }
         img{
             width: 15%;
@@ -59,27 +57,15 @@
     .portfolio_div{
         .logos{
             margin: 0 auto;
-            gap: 30px;
+            gap: 0px;
             padding-top: 40px;
-            h2{
-                font-size: 35px;
+            img{
+                width: 100%;
             }
+           
         }
         .absolute7{
             bottom: -80%;
-        }
-    }  
-}
-@media screen and (max-width:500px){
-    .portfolio_div{
-        .logos{
-            margin: 0 auto;
-            gap: 30px;
-            padding-top: 40px;
-            // grid-template-columns: repeat(2,minmax(0,1fr));
-            h2{
-                font-size: 35px;
-            }
         }
     }  
 }

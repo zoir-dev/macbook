@@ -30,6 +30,9 @@ const resources = {
       label1: "Name (required)",
       label2: "Number (required)",
       contact: "Contacts",
+      application:
+        "Your application has been accepted, we will contact you soon!",
+      submitting: "Submitting...",
     },
   },
   uzb: {
@@ -57,6 +60,9 @@ const resources = {
       label1: "Ism (Majburiy)",
       label2: "Raqam (Majburiy)",
       contact: "Kontaktlar",
+      application:
+        "Arizangiz qabul qilindi, tez orada siz bilan aloqaga chiqamiz!",
+      submitting: "Jo'natilmoqda...",
     },
   },
   ru: {
@@ -84,6 +90,8 @@ const resources = {
       label1: "Имя (обязательно)",
       label2: "Номер (обязательно)",
       contact: "Контакты",
+      application: "Ваша заявка принята, мы свяжемся с вами в ближайшее время!",
+      submitting: "Отправка...",
     },
   },
 };

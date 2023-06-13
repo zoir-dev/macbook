@@ -6,8 +6,8 @@ import gg from "../../assets/гг.png";
 const HeaderDrawer = ({ open, setOpen, scrollToComponent }) => {
   const { t } = useTranslation();
   const handleClose = (id) => {
-    setOpen(false);
     scrollToComponent(id);
+    setOpen(false);
   };
   return (
     <Drawer open={open} anchor="right">
