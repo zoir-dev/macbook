@@ -35,7 +35,7 @@ const Header = ({ scrollToComponent }) => {
 
   return (
     <div className="header_div">
-      <img src={gg} className="logo" alt="" />
+      <img src={gg} className="logo" alt="" loading="lazy" />
       <div className="header_links">
         <button onClick={() => scrollToComponent("get")}>
           {t("What will you get")}
@@ -54,12 +54,22 @@ const Header = ({ scrollToComponent }) => {
             src={data.filter((d) => d.name === lang)[0].img}
             alt="flag"
           />
-          <img className={`arrow ${menu && "open_menu "}`} src={arrow} alt="" />
+          <img
+            className={`arrow ${menu && "open_menu "}`}
+            src={arrow}
+            alt=""
+            loading="lazy"
+          />
         </div>
         <Menu anchorEl={anchorEl} keepMounted open={menu} onClose={handleClose}>
           {data.map((d) => (
             <MenuItem key={d.name} onClick={() => changeLang(d)}>
-              <img className="flag menuFlag" src={d.img} alt="" />
+              <img
+                className="flag menuFlag"
+                src={d.img}
+                alt=""
+                loading="lazy"
+              />
             </MenuItem>
           ))}
         </Menu>

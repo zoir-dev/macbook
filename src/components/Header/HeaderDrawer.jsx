@@ -13,7 +13,7 @@ const HeaderDrawer = ({ open, setOpen, scrollToComponent }) => {
     <Drawer open={open} anchor="right">
       <div className="header_drawer">
         <div className="drawer_title">
-          <img src={gg} alt="" />
+          <img src={gg} alt="" loading="lazy" />
           <Close onClick={() => setOpen(false)} />
         </div>
         <div className="header_drawer_links">

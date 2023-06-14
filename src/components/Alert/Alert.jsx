@@ -3,7 +3,13 @@ import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 import { Slide } from "@mui/material";
 
-export default function DirectionSnackbar({ open, setOpen, message }) {
+export default function DirectionSnackbar({
+  open,
+  setOpen,
+  message,
+  severity,
+}) {
+  // console.log(severity);
   const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={10} ref={ref} variant="filled" {...props} />;
   });
@@ -34,7 +40,11 @@ export default function DirectionSnackbar({ open, setOpen, message }) {
         autoHideDuration={3000}
         style={{ zIndex: !open && "-1" }}
       >
-        <Alert style={{ backgroundColor: "#28BF04" }} onClose={handleClose}>
+        <Alert
+          style={{ backgroundColor: !severity ? "#28BF04" : "#dc5b5b" }}
+          severity={severity ? "error" : "success"}
+          onClose={handleClose}
+        >
           {message}
         </Alert>
       </Snackbar>

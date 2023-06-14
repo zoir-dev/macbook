@@ -16,9 +16,9 @@ const Work = () => {
   const { t } = useTranslation();
   return (
     <div id="work" className="work_div container">
-      <img src={four} className="absolute4" alt="" />
-      <img src={five} className="absolute5" alt="" />
-      <img src={six} className="absolute6" alt="" />
+      <img src={four} className="absolute4" alt="" loading="lazy" />
+      <img src={five} className="absolute5" alt="" loading="lazy" />
+      <img src={six} className="absolute6" alt="" loading="lazy" />
       <h1>{t("Stages of work")}</h1>
       <Timeline position="alternate" className="steps">
         <TimelineItem>

@@ -9,7 +9,7 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <div className="footer_div">
-      <img src={gg} alt="" />
+      <img src={gg} alt="" loading="lazy" />
       <div className="contacts">
         <p>{t("contact")}</p>
         <a href="tel:+998930045554">+998930045554</a>
@@ -17,13 +17,13 @@ const Footer = () => {
       </div>
       <div className="socials">
         <a href="https://t.me/uniagency">
-          <img src={telegram} alt="" />
+          <img src={telegram} alt="" loading="lazy" />
         </a>
         <a href="https://www.instagram.com/uniagency.uz/">
           <Instagram />
         </a>
         <a href="https://www.youtube.com/channel/UCpKe3MvpUghkvKn44Ke1suw">
-          <img src={utube} alt="" />
+          <img src={utube} alt="" loading="lazy" />
         </a>
       </div>
     </div>

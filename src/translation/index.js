@@ -32,6 +32,7 @@ const resources = {
       contact: "Contacts",
       application:
         "Your application has been accepted, we will contact you soon!",
+      reject: "Error occured with the request",
       submitting: "Submitting...",
       nameValid: "Name is required",
       phoneValid: "Phone Number is required",
@@ -64,8 +65,9 @@ const resources = {
       contact: "Kontaktlar",
       application:
         "Arizangiz qabul qilindi, tez orada siz bilan aloqaga chiqamiz!",
+      reject: "So'rov bo'yicha xatolik yuz berdi",
       submitting: "Jo'natilmoqda...",
-      nameValid: "Ism Majburiy",
+      nameValid: "Ism majburiy",
       phoneValid: "Telefon raqam majburiy",
     },
   },
@@ -95,6 +97,7 @@ const resources = {
       label2: "Номер (обязательно)",
       contact: "Контакты",
       application: "Ваша заявка принята, мы свяжемся с вами в ближайшее время!",
+      reject: "Произошла ошибка с запросом",
       submitting: "Отправка...",
       nameValid: "Oбязательно имя",
       phoneValid: "Oбязательно номер",

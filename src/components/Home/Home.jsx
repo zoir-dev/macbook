@@ -15,7 +15,7 @@ const Home = ({ scrollToComponent }) => {
           {t("home_button")}
         </button>
       </div>
-      <img src={laptop} alt="" />
+      <img src={laptop} alt="" loading="lazy" />
     </div>
   );
 };

@@ -7,8 +7,8 @@ const Get = ({ scrollToComponent }) => {
   const { t } = useTranslation();
   return (
     <div id="get" className="get_div container">
-      <img className="absolute1" src={one} alt="" />
-      <img className="absolute2" src={two} alt="" />
+      <img className="absolute1" src={one} alt="" loading="lazy" />
+      <img className="absolute2" src={two} alt="" loading="lazy" />
       <h1>{t("What will you get")} ?</h1>
       <div className="gets">
         <div className="get">
@@ -38,7 +38,7 @@ const Get = ({ scrollToComponent }) => {
       >
         {t("home_button")}
       </button>
-      <img className="absolute3" src={three} alt="" />
+      <img className="absolute3" src={three} alt="" loading="lazy" />
     </div>
   );
 };
